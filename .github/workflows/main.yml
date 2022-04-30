@@ -25,6 +25,9 @@ jobs:
       - name: Run tests
         run:
             yarn test:coverage
+      - name: Run e2e tests
+        run:
+            yarn test:e2e:ci
       - name: build app
         run: yarn build
       - name: build storybook
