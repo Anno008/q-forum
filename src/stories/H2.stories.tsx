@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { H1 as H2 } from "~/components/atoms";
+import { H2 } from "~/components/atoms";
 
 export default {
   title: "components/atoms/Typography/H2",
