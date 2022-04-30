@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 import styled from "styled-components";
 
@@ -37,7 +37,7 @@ type Props = {
   contentContainerTestId?: string;
 };
 
-const MainLayout: React.FC<Props> = ({
+const MainLayout: React.FC<PropsWithChildren<Props>> = ({
   children,
   contentContainerTestId,
   ...rest

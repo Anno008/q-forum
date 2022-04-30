@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import styled from "styled-components";
 
 interface ParagraphProps {
@@ -12,7 +13,7 @@ interface ParagraphProps {
   textAlign?: string;
 }
 
-export const Paragraph: React.FC<ParagraphProps> = styled.p<ParagraphProps>`
+export const Paragraph: React.FC<PropsWithChildren<ParagraphProps>> = styled.p<ParagraphProps>`
   ${({ bold }) => bold && "font-weight: bold;"}
   ${({ color, theme }) => `color: ${color ? color : theme.primaryTextColor};`}
   ${({ inline }) => inline && "display: inline;"}
@@ -31,12 +32,12 @@ interface HeadingProps {
   color?: string;
 }
 
-export const H1: React.FC<HeadingProps> = styled.h1<HeadingProps>`
+export const H1: React.FC<PropsWithChildren<HeadingProps>> = styled.h1<HeadingProps>`
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ color, theme }) => `color: ${color ? color : theme.primaryTextColor};`}
 `;
 
-export const H2: React.FC<HeadingProps> = styled.h2<HeadingProps>`
+export const H2: React.FC<PropsWithChildren<HeadingProps>> = styled.h2<HeadingProps>`
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ color, theme }) => `color: ${color ? color : theme.primaryTextColor};`}
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { PropsWithChildren, useState } from "react";
 
 import * as StyledComponents from "styled-components";
 import { ThemeProvider } from "styled-components";
@@ -10,7 +10,7 @@ import { LightTheme } from "~/theme/LightTheme";
 const getIsThemeVariant = (theme: string | null): theme is AppThemeVariants =>
   theme === "light" || theme === "dark";
 
-const AppThemeProvider: React.FC = ({ children }) => {
+const AppThemeProvider: React.FC<PropsWithChildren<unknown>> = ({ children }) => {
   const themes: Record<AppThemeVariants, StyledComponents.DefaultTheme> = {
     light: LightTheme,
     dark: DarkTheme
