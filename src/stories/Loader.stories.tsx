@@ -6,7 +6,13 @@ export default {
   component: Loader
 } as ComponentMeta<typeof Loader>;
 
-const Template: ComponentStory<typeof Loader> = () => <Loader />;
+const Template: ComponentStory<typeof Loader> = args => <Loader {...args} />;
 
 export const LoaderStory = Template.bind({});
-LoaderStory.storyName = "Loader";
+LoaderStory.storyName = "Default loader";
+
+export const LoaderStoryWithSmallSize = Template.bind({});
+LoaderStoryWithSmallSize.storyName = "Small loader";
+LoaderStoryWithSmallSize.args = {
+  size: "small"
+};

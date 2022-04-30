@@ -41,12 +41,3 @@ export const H2: React.FC<PropsWithChildren<HeadingProps>> = styled.h2<HeadingPr
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ color, theme }) => `color: ${color ? color : theme.primaryTextColor};`}
 `;
-interface LabelProps {
-  bold?: boolean;
-  color?: string;
-}
-
-export const Label = styled.label<LabelProps>`
-  ${({ bold }) => bold && "font-weight: bold;"}
-  ${({ color, theme }) => `color: ${color ? color : theme.primaryTextColor};`}
-`;

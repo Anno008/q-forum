@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import styled from "styled-components";
 
 interface Props {
@@ -20,7 +21,7 @@ interface Props {
   minHeight?: string;
 }
 
-export const FlexGrid = styled.div<Props>`
+export const FlexGrid: React.FC<PropsWithChildren<Props>> = styled.div<Props>`
   display: flex;
   box-sizing: border-box;
   ${({ flexDirection }) => flexDirection && `flex-direction: ${flexDirection};`}
