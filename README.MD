@@ -1,10 +1,10 @@
 # Q forum
 
 ![Build](https://github.com/Anno008/q-forum/actions/workflows/main.yml/badge.svg)
-![Coverage lines](./coverageBadges/badge-lines.svg)
-![Coverage functions](./coverageBadges/badge-functions.svg)
-![Coverage branches](./coverageBadges/badge-branches.svg)
-![Coverage statements](./coverageBadges/badge-statements.svg)
+![Lines](./coverageBadges/badge-lines.svg)
+![Functions](./coverageBadges/badge-functions.svg)
+![Branches](./coverageBadges/badge-branches.svg)
+![Statements](./coverageBadges/badge-statements.svg)
 
 Small app for listing posts and comments and showing corresponding authors
 
@@ -28,9 +28,12 @@ a. `pnpm i`
   * `pnpm test:coverage:open` -> displays the code coverage in a browser.
   * `pnpm test:e2e` -> headless e2e tests
   * `pnpm test:e2e:open` -> opens a cypress chromium window for e2e tests, requires that the web server is running
+  * `pnpm test:e2e:ci` -> starting the dev server and running cypress in headless mode.
   * `pnpm lint` -> goes through the code and checks for linting issues.
   * `pnpm lint:types` -> goes through the code and checks for typescript violations.
   * `pnpm lint:fix` -> goes through the code and checks for linting issues and fixes them where possible.
+  * `pnpm storybook` -> run the local storybook server to view the stories
+  * `pnpm build-storybook` -> generate storybook
 
 ## CI/CD
 Is executed on github via github actions. It installs the dependencies, lint the code, run the tests and deploy the site to firebase hosting.
