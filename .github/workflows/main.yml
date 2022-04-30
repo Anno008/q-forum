@@ -10,9 +10,12 @@ jobs:
       steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
+      - name: Install pnpm
+        run: 
+          npm i -g pnpm
       - name: Install dependencies
         run: 
-          pnpm
+          pnpm i
       - name: Lint
         run:
             pnpm lint
