@@ -3,6 +3,7 @@ import { postsRoute } from "../routes";
 import PageNotFound from "~/pages/PageNotFound";
 import PostsPage from "~/pages/PostsPage";
 import PostDetailsPage from "~/pages/PostDetailsPage";
+import withConsoleLog from "~/decorators/withConsoleLog";
 
 const AppRoutes = (): JSX.Element => (
   <Routes>
@@ -12,4 +13,4 @@ const AppRoutes = (): JSX.Element => (
     <Route path="*" element={<PageNotFound />} />
   </Routes>
 );
-export default AppRoutes;
+export default withConsoleLog(AppRoutes);

@@ -1,6 +1,7 @@
 import React from "react";
 
 import { BrowserRouter } from "react-router-dom";
+import withConsoleLog from "~/decorators/withConsoleLog";
 
 import AppRoutes from "~/navigation/AppRoutes";
 import Navbar from "~/navigation/Navbar";
@@ -12,4 +13,4 @@ const AppNavigation = (): JSX.Element => (
   </BrowserRouter>
 );
 
-export default AppNavigation;
+export default withConsoleLog(AppNavigation);

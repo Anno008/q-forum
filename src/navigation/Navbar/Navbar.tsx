@@ -7,6 +7,7 @@ import { FlexGrid, Paragraph, NavLinkWithoutDecoration } from "~/components/atom
 import ThemeSwitch from "~/components/ThemeSwitch";
 import locators from "~/testUtils/locators";
 import { setTestId } from "~/testUtils/setTestId";
+import withConsoleLog from "~/decorators/withConsoleLog";
 
 const NavbarContainer = styled.div`
   position: sticky;
@@ -58,4 +59,4 @@ const Navbar = (): JSX.Element => {
   );
 };
 
-export default Navbar;
+export default withConsoleLog(Navbar);
