@@ -1,0 +1,34 @@
+name: Verify, build and deploy to firebase
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+      runs-on: macos-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Install pnpm
+        run:
+          npm i -g pnpm
+      - name: Install dependencies
+        run: 
+          pnpm i
+      - name: Lint
+        run:
+            pnpm lint
+      - name: TSC
+        run: 
+            pnpm lint:types
+      - name: Run tests
+        run:
+            pnpm test:coverage
+      - name: build app
+        run: pnpm build
+      - name: Install firebase
+        run:
+            npm i -g firebase-tools
+      - name: Firebase deploy app
+        run: |
+          firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token ${{ secrets.FIREBASE_TOKEN }}

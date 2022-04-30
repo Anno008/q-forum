@@ -1,0 +1,44 @@
+{
+    "extends": [ 
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:jest/recommended",
+        "prettier"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": ["react", "@typescript-eslint", "jest", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "react/prop-types": "off",
+          // suppress errors for missing 'import React' in files
+        "react/react-in-jsx-scope": "off",
+        // "react/display-name": "off",
+        "prettier/prettier": [
+            "error",
+            {
+              "printWidth": 100,
+              "semi": true,
+              "semicolons": true,
+              "bracketSpacing": true,
+              "bracketSameLine": true,
+              "jsxSingleQuote": false,
+              "singleQuote": false,
+              "trailingComma": "none",
+              "arrowParens": "avoid",
+              "endOfLine": "auto"
+            }
+          ]
+    }
+}
