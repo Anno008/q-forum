@@ -28,3 +28,4 @@ coverage
 .firebase
 cypress/videos
 cypress/screenshots
+storybook-static

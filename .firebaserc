@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "q-forum-d9e91"
+  },
+  "targets": {
+    "q-forum-d9e91": {
+      "hosting": {
+        "q-forum": [
+          "q-forum-d9e91"
+        ],
+        "q-forum-storybook": [
+          "q-forum-storybook"
+        ]
+      }
+    }
   }
 }

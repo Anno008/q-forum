@@ -6,7 +6,7 @@ type ReturnType =
 
 // As not to add data-test-id in production build, only during testing
 export const setTestId = (id?: string): ReturnType => {
-  if (import.meta.env.VITE_APP_TESTS && id) {
+  if (import.meta.env?.VITE_APP_TESTS && id) {
     return { "data-test-id": id };
   }
 };

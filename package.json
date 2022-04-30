@@ -12,7 +12,9 @@
     "test:e2e": "cross-env npx cypress run --config-file ./cypress/cypress.json",
     "test:e2e:open": "cross-env npx cypress open --config-file ./cypress/cypress.json",
     "lint": "eslint ./src",
-    "lint:types": "tsc"
+    "lint:types": "tsc",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "react": "^18.1.0",
@@ -26,6 +28,13 @@
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
+    "@open-wc/webpack-import-meta-loader": "^0.4.7",
+    "@storybook/addon-actions": "^6.4.22",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-interactions": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
+    "@storybook/react": "^6.4.22",
+    "@storybook/testing-library": "^0.0.11",
     "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
@@ -55,6 +64,7 @@
     "jest-environment-jsdom": "^28.0.2",
     "opener": "^1.5.2",
     "prettier": "^2.6.1",
+    "storybook-addon-styled-component-theme": "^2.0.0",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4",

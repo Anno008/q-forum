@@ -12,7 +12,8 @@ const config: Config.InitialOptions = {
     "!src/testUtils/**",
     "!src/main.tsx",
     "!src/App/globalStyles.ts",
-    "!src/contexts/*"
+    "!src/contexts/*",
+    "!**/*.stories.tsx"
   ],
   transform: {
     "^.+\\.(ts|tsx)?$": "ts-jest",
