@@ -1,6 +1,10 @@
 # Q forum
 
 ![Build](https://github.com/Anno008/q-forum/actions/workflows/main.yml/badge.svg)
+![Coverage lines](./coverageBadges/badge-lines.svg)
+![Coverage functions](./coverageBadges/badge-functions.svg)
+![Coverage branches](./coverageBadges/badge-branches.svg)
+![Coverage statements](./coverageBadges/badge-statements.svg)
 
 Small app for listing posts and comments and showing corresponding authors
 
