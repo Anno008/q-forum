@@ -5,6 +5,7 @@ const config: Config.InitialOptions = {
   verbose: true,
   preset: "ts-jest",
   setupFilesAfterEnv: ["<rootDir>/jest/setupTests.ts"],
+  coverageReporters: ["json-summary", "text", "lcov"],
   collectCoverageFrom: [
     "src/**",
     "!src/@types/**",
