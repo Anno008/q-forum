@@ -1,4 +1,4 @@
-name: Verify, build and deploy to firebase
+name: Build
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-      runs-on: macos-latest
+      runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -38,3 +38,10 @@ jobs:
       - name: Firebase deploy app and storybook
         run: |
           firebase deploy --only hosting -m "Pipe $CI_PIPELINE_ID Build $CI_BUILD_ID" --token ${{ secrets.FIREBASE_TOKEN }}
+      - name: Update code coverage badges and commit badges
+        run: 
+            pnpm test:coverage:badges
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: 'master'
