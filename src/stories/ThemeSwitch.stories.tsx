@@ -9,7 +9,6 @@ export default {
 
 const Template: ComponentStory<typeof ThemeSwitch> = args => (
   <AppThemeProvider>
-    {" "}
     <ThemeSwitch {...args} />
   </AppThemeProvider>
 );
