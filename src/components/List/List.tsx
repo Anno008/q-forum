@@ -37,8 +37,14 @@ const List = <T extends { id: number }>({ arg, fetchItemsFn, renderItem }: Props
         alignItems="center"
         flexDirection="row"
         justifyContent="flex-end"></FlexGrid>
-      {!items ? <Loader /> : items.map(p => renderItem(p))}
-      {items.length > offset && (
+      {items.length === 0 ? (
+        <FlexGrid alignItems="center" justifyContent="center">
+          <Loader />
+        </FlexGrid>
+      ) : (
+        items.map(p => renderItem(p))
+      )}
+      {items.length > offset && items.length >= LIMIT && (
         <Button
           onClick={() => {
             setOffset(previousOffset => previousOffset + LIMIT);

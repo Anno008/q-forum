@@ -15,7 +15,7 @@ jest.mock("../../../api/services/userService", () => ({
 describe("List component tests", () => {
   it("should show items", async () => {
     // Arrange
-    const fetchFn = jest.fn(() => Promise.resolve(postsFixture));
+    const fetchFn = jest.fn().mockResolvedValue(postsFixture);
 
     // Act
     renderWithContext(
