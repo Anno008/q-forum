@@ -1,6 +1,4 @@
-import type { Config } from "@jest/types";
-
-const config: Config.InitialOptions = {
+const config = {
   testEnvironment: "jsdom",
   verbose: true,
   preset: "ts-jest",
@@ -40,4 +38,6 @@ const config: Config.InitialOptions = {
     }
   }
 };
-export default config;
+
+// eslint-disable-next-line no-undef
+module.exports = config;
