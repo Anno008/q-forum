@@ -16,9 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
+    "types": ["node", "jest", "@types/testing-library__jest-dom"],
     "paths": {
       "~/*": ["./src/*"]
     }
   },
-  "include": ["src", "jest/setupTests.ts"]
+  "include": ["src", "jest/setupTests.ts"],
+  "exclude": ["node_modules", "./jest.config.ts"]
 }
