@@ -47,5 +47,10 @@ describe("ScrollToTopButton component tests", () => {
     await waitFor(() => {
       expect(spyScrollTo).toHaveBeenCalledWith({ behavior: "smooth", top: 0 });
     });
+    fireEvent.scroll(window, {
+      target: {
+        scrollY: 0
+      }
+    });
   });
 });
