@@ -51,8 +51,6 @@ Running E2E tests locally:
 * eslint -> static analyzer, validates code against defined rules
 * jest -> test runner
 * cypress -> end to end testing framework 
-* react-hook-form -> lib for simplifying form validation
-* yup -> schema builder for validation
 * storybook -> visually testing ui components in isolation (Really doesn't like me)
 * cross-env -> easy setting of environment variables independently of the OS
 * vite -> build tool for faster development.
